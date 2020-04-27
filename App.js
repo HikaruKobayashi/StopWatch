@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './src/screens/HomeScreens';
+import HomeBar from './src/screens/HomeBar';
+import Header from './src/components/Header';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hikaru Kobayashi</Text>
-    </View>
+    <PaperProvider>
+      <Header />
+      <HomeScreen />
+      <HomeBar />
+    </PaperProvider>
   );
 }
 
