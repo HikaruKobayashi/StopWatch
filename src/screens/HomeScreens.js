@@ -6,7 +6,9 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text>WelCome HomeScreen</Text>
-      <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+      <Button icon="camera" mode="contained" onPress={() => {
+        this.props.navigation.navigate('ReportScreen')
+      }}>
         Press me
       </Button>
     </View>

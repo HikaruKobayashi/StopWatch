@@ -11,9 +11,9 @@ export default class Header extends React.Component {
   render() {
     return (
       <Appbar.Header>
-        {/* <Appbar.BackAction
+        <Appbar.BackAction
           onPress={this._goBack}
-        /> */}
+        />
         <Appbar.Content
           title="Equivalent Exchange"
         />
