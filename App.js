@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 // import { createAppContainer } from 'react-navigation';
 // import { createStackNavigator } from 'react-navigation-stack';
-// import ReportScreen from './src/screens/ReportScreen';
+import ReportScreen from './src/screens/ReportScreen';
 import HomeScreen from './src/screens/HomeScreens';
 import HomeBar from './src/screens/HomeBar';
 import Header from './src/screens/Header';
@@ -65,7 +65,8 @@ export default class App extends React.Component {
             />
           </View>
         </View>
-        <HomeScreen />
+        {/* <HomeScreen /> */}
+        <ReportScreen />
         <HomeBar />
       </PaperProvider>
     );
