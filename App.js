@@ -8,6 +8,7 @@ import HomeBar from './src/screens/HomeBar';
 import Header from './src/screens/Header';
 import TodoInput from './src/components/TodoInput';
 import TodoItem from './src/components/TodoItem';
+import StopWatch from './src/components/StopWatch';
 import { Provider as PaperProvider } from 'react-native-paper';
 
 export default class App extends React.Component {
@@ -51,6 +52,7 @@ export default class App extends React.Component {
       <PaperProvider>
         <Header />
         <View style={styles.main} >
+          <StopWatch />
           <TodoInput onPress={this._onPress} />
           <View style={styles.todoListContainer} >
             <FlatList
@@ -66,7 +68,7 @@ export default class App extends React.Component {
           </View>
         </View>
         {/* <HomeScreen /> */}
-        <ReportScreen />
+        {/* <ReportScreen /> */}
         <HomeBar />
       </PaperProvider>
     );
