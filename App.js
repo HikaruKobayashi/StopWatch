@@ -50,20 +50,20 @@ export default class App extends React.Component {
     return (
       <PaperProvider>
         <Header />
-        <View style={styles.main}>
+        <View style={styles.main} >
           <TodoInput onPress={this._onPress} />
-          <View style={styles.todoListContainer}>
-          <FlatList
-            style={styles.todoList}
-            data={list}
-            renderItem={({ item, index }) => (
-              <TodoItem 
-                onDelete={this._delete(index)}
-                {...item}
-              />
-            )}
-          />
-        </View>
+          <View style={styles.todoListContainer} >
+            <FlatList
+              style={styles.todoList}
+              data={list}
+              renderItem={({ item, index }) => (
+                <TodoItem 
+                  onDelete={this._delete(index)}
+                  {...item}
+                />
+              )}
+            />
+          </View>
         </View>
         <HomeScreen />
         <HomeBar />
@@ -73,13 +73,8 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   main: {
+    backgroundColor: 'rgb(200, 200, 200);',
     flex: 1,
     maxWidth: 400,
     alignItems: 'center',

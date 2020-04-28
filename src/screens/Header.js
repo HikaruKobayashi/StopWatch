@@ -11,13 +11,13 @@ export default class Header extends React.Component {
   render() {
     return (
       <Appbar.Header>
-        <Appbar.BackAction
+        {/* <Appbar.BackAction
           onPress={this._goBack}
-        />
+        /> */}
         <Appbar.Content
           title="Equivalent Exchange"
         />
-        <Appbar.Action icon="magnify" onPress={this._handleSearch} />
+        {/* <Appbar.Action icon="magnify" onPress={this._handleSearch} /> */}
         <Appbar.Action icon="dots-vertical" onPress={this._handleMore} />
       </Appbar.Header>
     )
