@@ -144,7 +144,7 @@ export default class StopWatch extends Component {
     const { now, start, laps } = this.state
     const timer = now - start
     return (
-      <View>
+      <View style={styles.container}>
         <Timer interval={laps.reduce((total, curr) => total + curr, 0) + timer} style={styles.timer} />
         {laps.length === 0 && (
           <ButtonRow>
@@ -201,10 +201,18 @@ export default class StopWatch extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'rgb(13, 13, 13);',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   timer: {
+    color: 'rgb(255, 255, 255);',
     fontSize: 70,
     fontWeight: '200',
     width: 100,
+    marginTop: 100,
   },
   button: {
     width: 80,
@@ -212,6 +220,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 10,
   },
   buttonTitle: {
     fontSize: 18,
@@ -232,7 +241,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   lapText: {
-    color: 'black',
+    color: '#fff',
     fontSize: 18,
   },
   lapTimer: {
