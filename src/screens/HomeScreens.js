@@ -1,25 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import React from 'react'
+import { Button, View, Text } from 'react-native'
 
-export default function HomeScreen() {
+export default HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>WelCome HomeScreen</Text>
-      <Button icon="camera" mode="contained" onPress={() => {
-        this.props.navigation.navigate('ReportScreen')
-      }}>
-        Press me
-      </Button>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to StopWatch"
+        onPress={() => navigation.navigate('StopWatch')}
+      />
+       <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
