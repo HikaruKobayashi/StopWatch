@@ -1,18 +1,30 @@
 import React from 'react'
-import { Button, View, Text } from 'react-native'
+import { Button, View, Text, StyleSheet } from 'react-native'
 
 export default HomeScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+    <View style={styles.main}>
       <Button
-        title="Go to StopWatch"
+        title="Record"
+        onPress={() => navigation.navigate('StopWatch')}
+      />
+      <Button
+        title="StopWatch"
         onPress={() => navigation.navigate('StopWatch')}
       />
        <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        title="Report"
+        onPress={() => navigation.navigate('Report')}
       />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgb(0, 0, 0);'
+  }
+})
