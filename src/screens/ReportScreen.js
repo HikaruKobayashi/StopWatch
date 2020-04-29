@@ -33,7 +33,7 @@ export default class App extends React.Component {
             labels: this.labels,
             datasets: [{
               data: this.datasets,
-              color: (opacity = 1) => `rgba(230, 22, 115, 1)`,
+              color: (opacity = 1) => 'rgba(230, 22, 115, 1)',
               strokeWidth: 2
             }],
           }}
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
   },
   chart: {
     marginLeft: -15,
+    marginTop: 100,
     paddingLeft: 5
   }
 });
