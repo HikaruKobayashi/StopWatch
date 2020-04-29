@@ -3,20 +3,6 @@ import { StyleSheet, Text, View, Button, Dimensions } from 'react-native';
 import { Button2 } from 'react-native-paper';
 import { LineChart } from 'react-native-chart-kit';
 
-// export default function ReportScreen() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>WelCome ReportScreen</Text>
-//       <Button2
-//         title="go to Home"
-//         onPress={() => {
-//           this.props.navigation.navigate('Home')
-//         }}
-//       />
-//     </View>
-//   );
-// }
-
 export default class App extends React.Component {
   // ラベルを設定
   labels = ['1月', '2月', '3月', '4月'];
@@ -51,8 +37,8 @@ export default class App extends React.Component {
               strokeWidth: 2
             }],
           }}
-          width={Dimensions.get("window").width - 50}
-          height={181}
+          width={Dimensions.get("window").width}
+          height={Dimensions.get("window").height - 200}
           yAxisSuffix={''}
           chartConfig={this.chartConfig}
           withInnerLines={false}
@@ -66,7 +52,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgb(255, 255, 255);',
     alignItems: 'center',
     justifyContent: 'center',
   },
