@@ -2,7 +2,7 @@ import React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-export default function HomeBar() {
+export default function Footer() {
   return (
     <Appbar style={styles.bottom}>
       {/* <Appbar.Action icon="archive" onPress={() => console.log('Pressed archive')} /> */}

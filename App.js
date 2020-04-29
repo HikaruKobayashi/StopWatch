@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 // import { createStackNavigator } from 'react-navigation-stack';
 import ReportScreen from './src/screens/ReportScreen';
 import HomeScreen from './src/screens/HomeScreens';
-import HomeBar from './src/screens/HomeBar';
+import Footer from './src/screens/Footer';
 import Header from './src/screens/Header';
 import TodoInput from './src/components/TodoInput';
 import TodoItem from './src/components/TodoItem';
@@ -69,7 +69,7 @@ export default class App extends React.Component {
         </View>
         {/* <HomeScreen /> */}
         {/* <ReportScreen /> */}
-        <HomeBar />
+        <Footer />
       </PaperProvider>
     );
   }
