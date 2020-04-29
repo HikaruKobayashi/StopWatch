@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button, View, Text, StyleSheet } from 'react-native'
+import { Button, View, StyleSheet } from 'react-native'
 
 export default HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <Button
         title="Record"
-        onPress={() => navigation.navigate('StopWatch')}
+        onPress={() => navigation.navigate('Record')}
       />
       <Button
         title="StopWatch"
