@@ -1,23 +1,37 @@
 import React from 'react';
-import { Appbar } from 'react-native-paper';
-import { StyleSheet } from 'react-native';
+import { BottomNavigation, Text } from 'react-native-paper';
 
-export default function Footer() {
-  return (
-    <Appbar style={styles.bottom}>
-      {/* <Appbar.Action icon="archive" onPress={() => console.log('Pressed archive')} /> */}
-      {/* <Appbar.Action icon="mail" onPress={() => console.log('Pressed mail')} /> */}
-      {/* <Appbar.Action icon="label" onPress={() => console.log('Pressed label')} /> */}
-      <Appbar.Action icon="delete" onPress={() => console.log('Pressed delete')} />
-    </Appbar>
-  );
+const MusicRoute = () => <Text>Music</Text>;
+
+const AlbumsRoute = () => <Text>Albums</Text>;
+
+const RecentsRoute = () => <Text>Recents</Text>;
+
+export default class Footer extends React.Component {
+  state = {
+    index: 0,
+    routes: [
+      { key: 'music', title: 'Music', icon: 'queue-music' },
+      { key: 'albums', title: 'Albums', icon: 'album' },
+      { key: 'recents', title: 'Recents', icon: 'history' },
+    ],
+  };
+
+  _handleIndexChange = index => this.setState({ index });
+
+  _renderScene = BottomNavigation.SceneMap({
+    music: MusicRoute,
+    albums: AlbumsRoute,
+    recents: RecentsRoute,
+  });
+
+  render() {
+    return (
+      <BottomNavigation
+        navigationState={this.state}
+        onIndexChange={this._handleIndexChange}
+        renderScene={this._renderScene}
+      />
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  bottom: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },
-});
